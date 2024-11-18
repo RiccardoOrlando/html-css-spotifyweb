@@ -27,21 +27,21 @@
   max-width: 100%;
 }
 
-.hidden-mobile{
+.hidden-mobile {
   display: none;
 }
 
-.white{
+.white {
   color: white;
 }
 
-li{
+li {
   list-style: none;
 }
 
-
-
-
+img{
+  display: block;
+}
 
 /*----------------
     LAYOUT
@@ -71,6 +71,7 @@ li{
   flex-grow: 1;
 }
 
+
 /*----------------
     TYPOGRAPHY
 ------------------*/
@@ -78,6 +79,10 @@ body {
   font-family: "Roboto", serif;
   color: gray;
   height: 100vh;
+}
+
+h3{
+  font-size: 16px;
 }
 
 /*----------------
@@ -95,17 +100,43 @@ body {
   padding: 10px 40px;
 }
 
-.btn-large {
+.btn-play{
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  border: 1px solid greenyellow;
+  cursor: pointer;
+}
+
+.btn-classic:hover{
+  color: white;
+  border-bottom: 2px solid greenyellow;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-classic{
+  background-color: transparent;
+  border: none;
+  color: gray;
+}
+
+.main-nav li a{
+  display: block;
+}
+
+
+/* .btn-large {
   padding: 10px 20px;
   font-size: 16px;
-}
+} */
 
-.btn-primary {
+/* .btn-primary {
   background-color: lightcoral;
   color: #fff;
-}
+} */
 
-.square-btn{
+.square-btn {
   padding: 0 10px;
   font-size: 40px;
   font-weight: 600;
@@ -130,32 +161,31 @@ body {
   text-align: center;
 }
 
-.side-bar img{
+.side-bar img {
   height: 30px;
 }
 
-.app-feature .logo img:last-child{
+.app-feature .logo img:last-child {
   min-height: 60px;
   padding: 8px;
   margin-bottom: 30px;
 }
 
-.main-nav li{
+.main-nav li {
   display: flex;
   align-items: center;
   padding: 10px 0px;
 }
 
-.main-nav li div{
+.main-nav li div {
   padding-left: 5px;
 }
 
-.playlist{
+.playlist {
   flex-grow: 1;
   margin-top: 30px;
   overflow-y: auto;
 }
-
 
 /*----------------
     MAIN
@@ -173,7 +203,7 @@ main {
   height: calc(100% - 100px);
 }
 
-.main-top{
+.main-top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -181,7 +211,7 @@ main {
   background-color: #080b12;
 }
 
-.main-nav-bar{
+.main-nav-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -190,36 +220,71 @@ main {
   gap: 17px;
 }
 
-.album-img{
-  max-width: calc(100% / 2 - 20px);
+.album-img {
+  position: relative;
 }
 
-.album-img img{
+.album-img img {
   max-width: 100%;
 }
 
 .album{
+  max-width: calc(100% / 2 - 20px);
+}
+
+/* .album {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+.col{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.container h1{
+.container h1 {
   font-size: 30px;
   color: white;
 }
 
-.container .title-album{
+.container .title-album {
   padding-top: 20px;
   padding-bottom: 35px;
 }
 
-.album-description{
+.album-description {
   text-align: center;
 }
 
+.artisti .album-img img {
+  border-radius: 50%;
+  overflow: hidden;
+}
 
+.playlist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
 
+.circle{
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.album-img:hover .playlist-overlay{
+  opacity: 1;
+}
 
 /*----------------
     FOOTER
@@ -246,48 +311,46 @@ footer {
 }
 /* MD >= 768px */
 @media screen and (min-width: 640px) {
-    .side-bar{
-        width: 230px;
-    }
+  .side-bar {
+    width: 230px;
+  }
 
-    .show-mobile{
-      display: none;
-    }
+  .show-mobile {
+    display: none;
+  }
 
-    .hidden-mobile{
-      display: block;
-    }
+  .hidden-mobile {
+    display: block;
+  }
 
-    .main-nav li{
-      padding: 10px 10px;
-    }
+  .main-nav li {
+    padding: 10px 10px;
+  }
 
+  .playlist,
+  .flex div {
+    padding-left: 10px;
+  }
 
-    .playlist, .flex div{
-      padding-left: 10px;
-    }
+  .playlist li {
+    padding: 15px 0;
+  }
 
-    .playlist li{
-      padding: 15px 0;
-    }
-
-    .flex{
-      display: flex;
-      align-items: center;
-      padding: 10px 0;
-    }
-
-
+  .flex {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
 }
 /* LG >= 992px */
 @media screen and (min-width: 878px) {
-  .album-img{
+  .album{
     max-width: calc(100% / 4 - 20px);
   }
 }
 /* XL >= 1200px */
 @media screen and (min-width: 1440px) {
-  .album-img{
+  .album{
     max-width: calc(100% / 6 - 20px);
   }
 }
