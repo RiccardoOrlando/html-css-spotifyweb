@@ -112,12 +112,11 @@ h3{
   color: white;
   border-bottom: 2px solid greenyellow;
   background-color: transparent;
-  border: none;
 }
 
 .btn-classic{
   background-color: transparent;
-  border: none;
+  text-decoration: none;
   color: gray;
 }
 
@@ -211,7 +210,16 @@ main {
   background-color: #080b12;
 }
 
-.main-nav-bar {
+/* .main-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  line-height: 30px;
+  gap: 17px;
+} */
+
+.main-nav-bar ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
