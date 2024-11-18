@@ -204,6 +204,20 @@ main {
   gap: 20px;
 }
 
+.container h1{
+  font-size: 30px;
+  color: white;
+}
+
+.container .title-album{
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+.album-description{
+  text-align: center;
+}
+
 
 
 
@@ -216,6 +230,12 @@ footer {
   min-height: 100px;
   width: 100%;
 }
+
+/* .play-bar .play-bar-inner{
+  width: 25%;
+  height: 100%;
+  background-color: #c1c1c1;
+} */
 
 /*----------------
     RESPONSIVE
@@ -261,7 +281,13 @@ footer {
 }
 /* LG >= 992px */
 @media screen and (min-width: 878px) {
+  .album-img{
+    max-width: calc(100% / 4 - 20px);
+  }
 }
 /* XL >= 1200px */
 @media screen and (min-width: 1440px) {
+  .album-img{
+    max-width: calc(100% / 6 - 20px);
+  }
 }
