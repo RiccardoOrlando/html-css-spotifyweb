@@ -299,11 +299,37 @@ main {
 ------------------*/
 
 footer {
+  display: flex;
   background-color: #282828;
   min-height: 100px;
   width: 100%;
 }
 
+footer img{
+  width: 43px;
+  min-height: 31px;
+  padding-left: 10px;
+}
+
+.common-col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.music-col{
+  flex-grow: 1;
+}
+
+footer h4{
+  color: white;
+}
+
+.song-detail{
+  padding-left: 10px;
+  padding-right: 30px;
+}
 /* .play-bar .play-bar-inner{
   width: 25%;
   height: 100%;
